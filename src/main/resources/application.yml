@@ -1,0 +1,28 @@
+#config mongoDB
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/insurance_db
+      database: insurance_db
+
+#Config port springboot
+server:
+  port: 9082
+
+#Config resilience4j
+resilience4j:
+  circuitbreaker:
+    instances:
+      customerValidationCircuitBreaker:
+        failureRateThreshold: 50
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 2s
+        permittedNumberOfCallsInHalfOpenState: 2
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 3
+        waitDurationInOpenState: 10s
+  retry:
+    instances:
+      customerValidationRetry:
+        maxAttempts: 3
+        waitDuration: 1s
