@@ -1,3 +1,5 @@
+#agi-insurance-service
+
 S - Single Responsibility Principle (SRP)
 Cada classe tem uma única responsabilidade: InsuranceService - Gerencia regras de negócio do seguro.
 InsuranceController - Expõe os endpoints da API.
@@ -20,3 +22,35 @@ CustomerValidationPort → Para verificar se o cliente existe.
 D - Dependency Inversion Principle (DIP)
 Em vez de depender de implementações concretas, o InsuranceService depende apenas de interfaces (InsuranceRepositoryPort, CustomerValidationPort). 
 As implementações concretas (ex: MongoInsuranceRepository) são injetadas via Spring, garantindo baixo acoplamento.
+
+#Curls 
+
+curl -X POST \
+http://localhost:9082/insurances/contract \
+-H 'Accept: */*' \
+-H 'Accept-Encoding: gzip, deflate' \
+-H 'Cache-Control: no-cache' \
+-H 'Connection: keep-alive' \
+-H 'Content-Length: 48' \
+-H 'Content-Type: application/json' \
+-H 'Host: localhost:9082' \
+-H 'Postman-Token: 2de8d730-2679-4c9f-8a57-60c0db8c7d36,567d32ea-5543-4bf7-b417-4d343f17ee4f' \
+-H 'User-Agent: PostmanRuntime/7.16.3' \
+-H 'cache-control: no-cache' \
+-d '{
+"cpf": "12345678900",
+"type": "gold"
+}'
+
+
+curl -X GET \
+http://localhost:9082/insurances/simulate/12345678900 \
+-H 'Accept: */*' \
+-H 'Accept-Encoding: gzip, deflate' \
+-H 'Cache-Control: no-cache' \
+-H 'Connection: keep-alive' \
+-H 'Content-Type: application/json' \
+-H 'Host: localhost:9082' \
+-H 'Postman-Token: 0fc022bc-f5f9-4c0b-a6e3-a42323861d18,e822e329-ed0d-4284-9d98-315559c5f1fb' \
+-H 'User-Agent: PostmanRuntime/7.16.3' \
+-H 'cache-control: no-cache'
