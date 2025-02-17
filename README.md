@@ -1,4 +1,4 @@
-#agi-insurance-service
+# agi-insurance-service
 
 S - Single Responsibility Principle (SRP)
 Cada classe tem uma única responsabilidade: InsuranceService - Gerencia regras de negócio do seguro.
@@ -23,7 +23,7 @@ D - Dependency Inversion Principle (DIP)
 Em vez de depender de implementações concretas, o InsuranceService depende apenas de interfaces (InsuranceRepositoryPort, CustomerValidationPort). 
 As implementações concretas (ex: MongoInsuranceRepository) são injetadas via Spring, garantindo baixo acoplamento.
 
-#Curls 
+# Curls 
 
 curl -X POST \
 http://localhost:9082/insurances/contract \
