@@ -1,7 +1,7 @@
-package br.com.agi.infrastructure.adapter;
+package br.com.agi.adapter.out;
 
 import br.com.agi.application.exception.ApiServiceUnavailableException;
-import br.com.agi.domain.port.out.CustomerValidationPort;
+import br.com.agi.application.port.out.CustomerValidationPort;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
 import org.slf4j.Logger;

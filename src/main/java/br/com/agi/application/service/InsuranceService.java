@@ -2,10 +2,10 @@ package br.com.agi.application.service;
 
 import br.com.agi.application.exception.CustomerNotFoundException;
 import br.com.agi.domain.model.Insurance;
-import br.com.agi.domain.port.in.InsuranceUseCase;
-import br.com.agi.domain.port.out.CustomerValidationPort;
-import br.com.agi.domain.port.out.InsuranceRepositoryPort;
-import br.com.agi.infrastructure.response.InsuranceSimulationResponse;
+import br.com.agi.application.port.in.InsuranceUseCase;
+import br.com.agi.application.port.out.CustomerValidationPort;
+import br.com.agi.application.port.out.InsuranceRepositoryPort;
+import br.com.agi.adapter.in.dto.InsuranceSimulationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

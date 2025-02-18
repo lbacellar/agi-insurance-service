@@ -1,4 +1,4 @@
-package br.com.agi.infrastructure.request;
+package br.com.agi.adapter.in.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

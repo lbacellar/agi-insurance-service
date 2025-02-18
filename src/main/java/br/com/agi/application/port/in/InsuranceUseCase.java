@@ -1,7 +1,7 @@
-package br.com.agi.domain.port.in;
+package br.com.agi.application.port.in;
 
 import br.com.agi.domain.model.Insurance;
-import br.com.agi.infrastructure.response.InsuranceSimulationResponse;
+import br.com.agi.adapter.in.dto.InsuranceSimulationResponse;
 
 public interface InsuranceUseCase {
     InsuranceSimulationResponse simulateInsurance(String cpf);

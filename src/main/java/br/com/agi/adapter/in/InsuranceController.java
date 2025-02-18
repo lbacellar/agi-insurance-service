@@ -1,9 +1,9 @@
-package br.com.agi.infrastructure.controller;
+package br.com.agi.adapter.in;
 
 import br.com.agi.application.service.InsuranceService;
 import br.com.agi.domain.model.Insurance;
-import br.com.agi.infrastructure.request.InsuranceContractRequest;
-import br.com.agi.infrastructure.response.InsuranceSimulationResponse;
+import br.com.agi.adapter.in.dto.InsuranceContractRequest;
+import br.com.agi.adapter.in.dto.InsuranceSimulationResponse;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
