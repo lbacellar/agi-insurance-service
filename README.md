@@ -1,6 +1,6 @@
 # agi-insurance-service
 
-Serviço é responsável por simular e realizar a contratação do seguro.
+Serviço responsável por simular e realizar a contratação do seguro.
 
 
 # Documentação 
